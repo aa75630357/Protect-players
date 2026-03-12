@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://c67o7stb0pxu2"]
+
+[ext_resource type="Script" uid="uid://uk5n2ygg4d41" path="res://Scense/score.gd" id="1_vn3pk"]
+
+[node name="score" type="Control"]
+layout_mode = 3
+anchor_left = -0.5
+anchor_top = -0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_vn3pk")
+
+[node name="Score_number" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 31.5
+offset_right = 86.5
+offset_bottom = 23.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+text = "04123"
+
+[node name="Score" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -77.5
+offset_right = -18.5
+offset_bottom = 23.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+text = "Score："

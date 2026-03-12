@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6as7dgdqs4m3"]
+
+[ext_resource type="Script" uid="uid://odlia4dxpc7d" path="res://Scense/mouse_energy.gd" id="1_cak47"]
+
+[node name="Mouse_energy" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_cak47")
+metadata/_edit_lock_ = true
+
+[node name="Energy_image" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="Energy_image"]
+layout_mode = 3
+anchor_left = 0.9652778
+anchor_right = 1.0
+anchor_bottom = 0.061728396
+grow_horizontal = 0
+mouse_filter = 2
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Energy_back" type="ColorRect" parent="Energy_image/Control"]
+layout_mode = 0
+offset_left = -223.0
+offset_top = 17.0
+offset_right = 24.0
+offset_bottom = 63.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Energy_E" type="ColorRect" parent="Energy_image/Control"]
+layout_mode = 0
+offset_left = -220.0
+offset_top = 20.0
+offset_right = 20.0
+offset_bottom = 60.0
+mouse_filter = 2
+color = Color(0.5582481, 1, 0.54464203, 1)

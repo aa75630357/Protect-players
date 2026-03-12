@@ -1,0 +1,28 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Godot_Porject02"
+run/main_scene="uid://ddvumhwj4e6r7"
+config/features=PackedStringArray("4.5", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+MouseEnergy="*res://Scense/mouse_energy.tscn"
+Enemy="*res://Scense/enemy.tscn"
+PlayerHealth="*res://Scense/player_health.tscn"
+Score="*res://Scense/score.tscn"
+EndGame="*res://Scense/end_game.tscn"
+
+[display]
+
+window/stretch/mode="viewport"

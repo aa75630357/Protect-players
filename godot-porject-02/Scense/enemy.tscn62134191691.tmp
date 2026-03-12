@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpmmludeuvnyu"]
+
+[ext_resource type="Script" uid="uid://ccsm3qaahy5f3" path="res://Scense/enemy.gd" id="1_bx03u"]
+[ext_resource type="Script" uid="uid://b66mvk42g5kp1" path="res://Scense/spawn_manager.gd" id="1_gpl1s"]
+[ext_resource type="Texture2D" uid="uid://pbtv0tcmpq6v" path="res://image/Gemini_Generated_Image_y5wf4py5wf4py5wf.png" id="2_gpl1s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5d7f"]
+size = Vector2(63, 64)
+
+[node name="enemy" type="Node2D"]
+script = ExtResource("1_gpl1s")
+
+[node name="readybodymove2" type="RigidBody2D" parent="." groups=["enemy"]]
+input_pickable = true
+script = ExtResource("1_bx03u")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="readybodymove2"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_s5d7f")
+
+[node name="Sprite2D" type="Sprite2D" parent="readybodymove2"]
+position = Vector2(0.50000477, -9.536743e-06)
+scale = Vector2(0.06152342, 0.06249998)
+texture = ExtResource("2_gpl1s")
+
+[connection signal="input_event" from="readybodymove2" to="readybodymove2" method="_on_input_event"]

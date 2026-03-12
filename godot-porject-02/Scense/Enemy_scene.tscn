@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dghrclb11851w"]
+
+[ext_resource type="Script" uid="uid://ccsm3qaahy5f3" path="res://Scense/enemy.gd" id="1_3xbrr"]
+[ext_resource type="Texture2D" uid="uid://pbtv0tcmpq6v" path="res://image/Gemini_Generated_Image_y5wf4py5wf4py5wf.png" id="2_8seww"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5d7f"]
+size = Vector2(63, 64)
+
+[node name="readybodymove2" type="RigidBody2D" groups=["enemy"]]
+z_index = -2
+collision_layer = 4
+collision_mask = 3
+input_pickable = true
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_3xbrr")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_s5d7f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.50000477, -9.536743e-06)
+scale = Vector2(0.06152342, 0.06249998)
+texture = ExtResource("2_8seww")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
